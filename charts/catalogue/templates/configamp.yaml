@@ -4,4 +4,4 @@ metadata:
   name: catalogue
 data:
   MONGO: "true"
-  MONGO_URL: "{{ .Values.configmap.MONGO_URL }}""
+  MONGO_URL: "{{ .Values.configmap.MONGO_URL }}"
