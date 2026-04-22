@@ -26,7 +26,7 @@ spec: #statefulset
       terminationGracePeriodSeconds: 10
       containers:
       - name: mongodb
-        image: {{ .Values.statefulset.repository }}:{{ .Values.statefulset.tag }}  
+        image: "{{ .Values.statefulset.repository }}:{{ .Values.statefulset.tag }}"
         imagePullPolicy: Always
         resources:
           requests:
