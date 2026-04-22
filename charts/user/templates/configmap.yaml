@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: user
+  namespace: roboshop
+data:
+  MONGO: "true"
+  REDIS_URL: "{{ .Values.user.configmap.REDIS_URL }}" 
+  MONGO_URL: "{{ .Values.user.configmap.MONGO_URL }}"
