@@ -14,7 +14,7 @@ spec:
       tier: db
       component: rabbitmq # has to match .spec.template.metadata.labels
   serviceName: "rabbitmq-headless-service"
-  replicas: {{ .Values.rabbitmq.statefulset.replicas }}
+  replicas: {{ .Values.statefulset.replicas }}
   minReadySeconds: 10 # by default is 0
   template:
     metadata:
@@ -26,7 +26,7 @@ spec:
       terminationGracePeriodSeconds: 10
       containers:
       - name: rabbitmq
-        image: "{{ .Values.rabbitmq.statefulset.repository }}:{{ .Values.rabbitmq.statefulset.tag }}"
+        image: "{{ .Values.statefulset.repository }}:{{ .Values.statefulset.tag }}"
         imagePullPolicy: Always
         resources:
           requests:

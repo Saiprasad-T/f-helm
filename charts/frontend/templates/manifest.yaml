@@ -13,7 +13,7 @@ spec:
       project: roboshop
       tier: backend
       component: frontend
-  replicas: {{ .Values.frontend.deployment.replicas }}
+  replicas: {{ .Values.deployment.replicas }}
   template:
     metadata:
       labels:
@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: "{{ .Values.frontend.deployment.repository}}:{{ .Values.frontend.deployment.tag }}"
+          image: "{{ .Values.deployment.repository}}:{{ .Values.deployment.tag }}"
           imagePullPolicy: Always
           resources:
             requests:
